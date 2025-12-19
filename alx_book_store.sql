@@ -53,7 +53,7 @@ CREATE TABLE order_details (
     FOREIGN KEY (order_id) REFERENCES orders(order_id) -- Connect to Orders table
         ON DELETE CASCADE                         -- If an order is deleted, delete its details too
         ON UPDATE CASCADE,                        -- Update order_id if it changes
-    FOREIGN KEY (book_id) REFERENCES books(book_id) -- Connect to Books table
+    FOREIGN KEY (book_id) REFERENCES Books(book_id) -- Connect to Books table
         ON DELETE CASCADE                         -- If a book is deleted, remove related order details
         ON UPDATE CASCADE                         -- Update book_id automatically if it changes
 );
