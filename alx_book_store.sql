@@ -50,7 +50,7 @@ CREATE TABLE order_details (
     order_id INT,
     book_id INT,
     quantity DOUBLE NOT NULL DEFAULT 1,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id) -- Connect to Orders table
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id) -- Connect to Orders table
         ON DELETE CASCADE                         -- If an order is deleted, delete its details too
         ON UPDATE CASCADE,                        -- Update order_id if it changes
     FOREIGN KEY (book_id) REFERENCES Books(book_id) -- Connect to Books table
