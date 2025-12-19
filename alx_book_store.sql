@@ -39,7 +39,7 @@ CREATE TABLE orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
     order_date DATE,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
         ON DELETE CASCADE                        -- If a customer is deleted, delete their orders too
         ON UPDATE CASCADE                        -- Update customer_id automatically if it changes
 );
